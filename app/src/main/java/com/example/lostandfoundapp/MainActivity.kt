@@ -13,15 +13,18 @@ class MainActivity : AppCompatActivity() {
 
         val btnCreate = findViewById<Button>(R.id.btnCreate)
         val btnShow = findViewById<Button>(R.id.btnShow)
+        val btnShowOnMap = findViewById<Button>(R.id.btnShowOnMap)
 
         btnCreate.setOnClickListener {
-            val intent = Intent(this, CreateAdvertActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, CreateAdvertActivity::class.java))
         }
 
         btnShow.setOnClickListener {
-            val intent = Intent(this, ShowItemsActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, ShowItemsActivity::class.java))
+        }
+
+        btnShowOnMap.setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
         }
     }
 }
